@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 from datetime import timedelta
 
@@ -27,7 +28,7 @@ SECRET_KEY = 'django-insecure-5e^@pqov!cbe2-l9&-531a6)@$*8vja#q!-4e_3+hc1^$6-*u*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -182,3 +183,5 @@ EMAIL_PORT = 587
 
 EMAIL_HOST_USER = 'bhoomij742@gmail.com'
 EMAIL_HOST_PASSWORD = 'fiatjxbnshvkhgir'  # Gmail App password
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
